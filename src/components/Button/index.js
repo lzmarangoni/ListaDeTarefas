@@ -2,7 +2,10 @@ import './Button.css'
 
 const Button =(props)=>{
     return(
-        <button onSubmit={props.onSubmit} ></button>
+        <div className='button'>
+            <button>{props.label}</button>
+        </div>
+        
     )
 }
 
