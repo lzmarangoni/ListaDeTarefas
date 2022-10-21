@@ -1,3 +1,40 @@
 {
-    "tarefas":[]
+  "tarefas": [
+    {
+      "id": 0.4463319147748144,
+      "title": "Lavar o carro",
+      "time": "1",
+      "done": false
+    },
+    {
+      "id": 0.8151230146622619,
+      "title": "Comprar comida",
+      "time": "2",
+      "done": false
+    },
+    {
+      "id": 0.6313879829296787,
+      "title": "nova ",
+      "time": "5",
+      "done": false
+    },
+    {
+      "id": 0.7555628138109429,
+      "title": "desligar a maquina",
+      "time": "5",
+      "done": false
+    },
+    {
+      "id": 0.07666494257994816,
+      "title": "NOva ",
+      "time": "56",
+      "done": false
+    },
+    {
+      "id": 0.9639608737682355,
+      "title": "Nova 2",
+      "time": "6+",
+      "done": false
+    }
+  ]
 }

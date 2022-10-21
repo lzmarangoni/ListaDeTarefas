@@ -15,6 +15,10 @@
     padding: 20px 10px;
 }
 
+.input #task{
+    margin-bottom: 15px;
+}
+
 .input label{
     position: absolute;
     left: 10px;
