@@ -2,7 +2,7 @@ import './Input.css'
 
 const Input=(props)=>{
     return(
-        <input type={props.type} className="input"/>
+        <input onChange={props.onChange} type={props.type} className="input"/>
     )
 }
 

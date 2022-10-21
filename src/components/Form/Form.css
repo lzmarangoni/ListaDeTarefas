@@ -3,12 +3,12 @@
     width: 100%;
     justify-content: center;
     box-sizing: border-box;
-    padding: 0px 5px;
+    padding: 5px;
 }
 
 .form-newList input{
    width: 100%;
     box-sizing: border-box;
-    margin: 0px 5px;
+    margin: 0px 5px 0px 0px ;
 
 }

@@ -2,7 +2,7 @@ import './Form.css'
 
 const Form =(props)=>{
     return(
-        <form className='form-newList'>
+        <form onSubmit={props.onSubmit} className='form-newList'>
             {props.children}
         </form>
     )
