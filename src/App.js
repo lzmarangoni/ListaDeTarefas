@@ -51,8 +51,15 @@ function App() {
     setTitle('');
     setTime('');
 
-    setTasks((prevState)=>[...prevState,newTask])
+    setTasks((prevState)=>[...prevState, newTask])
+        
+  }
 
+  const handleDelete = async (id)=>{
+      await fetch(API+'tarefas/'+ tasks.id,{
+      method:'DELETE',
+    });
+    setTasks((prevState)=>[prevState.filter((tasks)=>tasks.id !== id)])
   }
 
   if(loadind){
@@ -88,7 +95,18 @@ function App() {
         <div>
           <h3>Tarefas</h3>
           {tasks.length === 0 && <p>Não há tarefas</p>}
-          {tasks.map(task=><p key={task.id}>{task.title}</p>)}
+          {tasks.map(task=>
+            <div>
+              <p key={task.id}>{task.title}</p>
+              <p>Duração: {task.time} hs</p>
+              <div>
+                <span>
+                  {!task.done ? <BsBookmarkCheck/> : <BsBookmarkCheckFill/>}
+                </span>
+                <BsTrash onClick={()=>{handleDelete()}}/>
+              </div>
+            </div>
+            )}
         </div>
       </Container> 
     </div>
