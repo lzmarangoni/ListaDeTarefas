@@ -10,22 +10,20 @@ import Container from './components/Container'
 const API = 'http://localhost:5000'
 
 function App() {
-  const [title, setTask] = useState('')
+  const [title, setTitle] = useState('')
   const [time, setTime] = useState('')
   const [tasks, setTasks] = useState([])
   const [loadind, setLoading]= useState(false)
 
   function handleSubmit(e){
     e.preventDefault();
-    console.log("formulario enviado")
+    console.log(title)
+    setTitle('');
+
    
   }
 
-  function captureValue(e){
-    let newTask = e.target.value;
-    console.log(newTask)
-    return newTask;
-  }
+ 
 
 
   return (
@@ -33,8 +31,15 @@ function App() {
       <Container>
         <Header value="Lista de tarefas"/>
         <Form onSubmit={handleSubmit}>
-          <Input onChange={captureValue}/>
-          <Button label="Nova Tarefa"/>
+          <Input 
+            label={"Nova Tarefa"} 
+            id={"task"}
+            placeholder={"Resuma sua tarefa aqui..."}
+            onChange={(e)=>{setTitle(e.target.value)}}
+            value={title || " "}
+            />
+            
+          <Button label="Criar"/>
         </Form> 
         <div>
           <h3>Tarefas</h3>

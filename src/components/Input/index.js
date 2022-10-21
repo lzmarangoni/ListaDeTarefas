@@ -2,7 +2,11 @@ import './Input.css'
 
 const Input=(props)=>{
     return(
-        <input onChange={props.onChange} type={props.type} className="input"/>
+        <div className="input">
+            <label htmlFor={props.id}>{props.label}</label>
+            <input value={props.value} id={props.id} placeholder={props.placeholder} onChange={props.onChange} type={props.type} />
+        </div>
+        
     )
 }
 

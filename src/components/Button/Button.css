@@ -1,0 +1,15 @@
+.button {
+    margin-left: 8px;
+
+}
+
+.button button{
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 100%;
+}
+.button button:hover{
+    scale: 1.10;
+    transition-duration: 0.5s;
+}

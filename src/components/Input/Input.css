@@ -1,0 +1,28 @@
+.input {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.input input{
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    padding: 20px 10px;
+}
+
+.input label{
+    position: absolute;
+    left: 10px;
+    top:-10px;
+    box-sizing: border-box;
+    padding: 2px 5px;
+    background-color: darkgrey;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
