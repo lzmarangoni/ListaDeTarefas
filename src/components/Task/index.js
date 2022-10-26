@@ -9,7 +9,7 @@ const Task =(props)=>{
                 <h3>{props.title}</h3>
                 <p>Duração: {props.time} hs</p>
             <div>
-                <span >
+                <span onClick={props.done}>
                     {props.check ? <BsBookmarkCheck/> : <BsBookmarkCheckFill/>}
                 </span>
                 <BsTrash onClick={props.onClick}/>

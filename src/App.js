@@ -46,8 +46,6 @@ function App() {
       body: JSON.stringify(newTask),
       headers: {'Content-Type' :"application/json"},
     })
-
-    console.log(newTask)
     
     setTitle('');
     setTime('');
@@ -57,10 +55,24 @@ function App() {
   }
 
   const handleDelete = async (id)=>{
-      await fetch(API+'tarefas/'+ tasks.id,{
+      await fetch(API+'tarefas/'+ id,{
       method:'DELETE',
     });
-    setTasks((prevState)=>[prevState.filter((tasks)=>tasks.id !== id)])
+    setTasks((prevState)=>prevState.filter((tasks)=>tasks.id !== id))
+  }
+
+
+  const handleEdit = async (task)=>{
+      task.done = !task.done
+      console.log(task.done)
+
+      const data = await fetch(API+'tarefas/'+ task.id,{
+      method:'PUT',
+      body: JSON.stringify(task),
+      headers: {'Content-Type' :"application/json"}
+    });
+
+    setTasks((prevState)=>prevState.map((t)=>(t.id === data.id) ? (t = data): t))
   }
 
   if(loadind){
@@ -95,13 +107,14 @@ function App() {
         </Form> 
         <div>
           <h3 id="sub">Tarefas</h3>
-          {tasks.length === 0 && <p>Não há tarefas</p>}
+          {tasks.length === 0 && <p id="sub">Não há tarefas</p>}
           {tasks.map(task=> <Task 
             key={task.id}  
             title={task.title} 
             time={task.time} 
-            check={!task.done} 
-            onClick={()=>{handleDelete(task.id)}}/>
+            check={task.done} 
+            onClick={()=>{handleDelete(task.id)}}
+            done={()=>{handleEdit(task)}}/>
             )}
         </div>
       </Container> 

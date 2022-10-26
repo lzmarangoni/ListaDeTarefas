@@ -1,82 +1,10 @@
 {
   "tarefas": [
     {
-      "id": 0.4463319147748144,
-      "title": "Lavar o carro",
-      "time": "1",
-      "done": false
-    },
-    {
-      "id": 0.8151230146622619,
-      "title": "Comprar comida",
-      "time": "2",
-      "done": false
-    },
-    {
-      "id": 0.6313879829296787,
-      "title": "nova ",
-      "time": "5",
-      "done": false
-    },
-    {
-      "id": 0.7555628138109429,
-      "title": "desligar a maquina",
-      "time": "5",
-      "done": false
-    },
-    {
-      "id": 0.07666494257994816,
-      "title": "NOva ",
-      "time": "56",
-      "done": false
-    },
-    {
-      "id": 0.9639608737682355,
-      "title": "Nova 2",
-      "time": "6+",
-      "done": false
-    },
-    {
-      "id": 0.022406550867696495,
-      "title": "",
-      "time": "",
-      "done": false
-    },
-    {
-      "id": 0.685928623054705,
-      "title": "",
-      "time": "",
-      "done": false
-    },
-    {
-      "id": 0.0637359094525407,
-      "title": "Nova tarefa",
-      "time": "2",
-      "done": false
-    },
-    {
-      "id": 0.49729794886660006,
+      "id": 0.8591961836203736,
       "title": "Buscar criança na escola",
-      "time": "30",
-      "done": false
-    },
-    {
-      "id": 0.3117230434732057,
-      "title": "uhausauh",
-      "time": "uhasuh",
-      "done": false
-    },
-    {
-      "id": 0.11487182967358844,
-      "title": "",
-      "time": "",
-      "done": false
-    },
-    {
-      "id": 0.06730537627099453,
-      "title": "",
-      "time": "",
-      "done": false
+      "time": "1",
+      "done": true
     }
   ]
 }
