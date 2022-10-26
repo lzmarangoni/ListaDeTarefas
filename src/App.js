@@ -6,6 +6,7 @@ import Input from './components/Input'
 import Button from './components/Button';
 import Form from './components/Form';
 import Container from './components/Container'
+import Task from './components/Task';
 
 const API = 'http://localhost:5000/'
 
@@ -95,17 +96,12 @@ function App() {
         <div>
           <h3>Tarefas</h3>
           {tasks.length === 0 && <p>Não há tarefas</p>}
-          {tasks.map(task=>
-            <div>
-              <p key={task.id}>{task.title}</p>
-              <p>Duração: {task.time} hs</p>
-              <div>
-                <span>
-                  {!task.done ? <BsBookmarkCheck/> : <BsBookmarkCheckFill/>}
-                </span>
-                <BsTrash onClick={()=>{handleDelete()}}/>
-              </div>
-            </div>
+          {tasks.map(task=> <Task 
+            key={task.id}  
+            title={task.title} 
+            time={task.time} 
+            check={!task.done} 
+            onClick={()=>{handleDelete()}}/>
             )}
         </div>
       </Container> 
