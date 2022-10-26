@@ -1,4 +1,11 @@
+.App{
+    height: 100vh;
+    justify-content: center;
+}
 .input{
     display: block;
     
+}
+#sub{
+    color: white;
 }

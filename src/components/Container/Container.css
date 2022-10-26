@@ -1,9 +1,9 @@
 .container{
     width: 40%;
-    background-color: aqua;
+    background-color: black;
     border-radius: 5px;
+    box-sizing: border-box;
+    padding: 20px;
     margin: auto;
-    text-align: center;
-    align-items: center;
 }
 

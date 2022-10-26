@@ -94,14 +94,14 @@ function App() {
           <Button label="Criar"/>
         </Form> 
         <div>
-          <h3>Tarefas</h3>
+          <h3 id="sub">Tarefas</h3>
           {tasks.length === 0 && <p>Não há tarefas</p>}
           {tasks.map(task=> <Task 
             key={task.id}  
             title={task.title} 
             time={task.time} 
             check={!task.done} 
-            onClick={()=>{handleDelete()}}/>
+            onClick={()=>{handleDelete(task.id)}}/>
             )}
         </div>
       </Container> 
